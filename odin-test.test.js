@@ -52,6 +52,9 @@ test("Caesar Cipher: Shifting characters positively", () =>
     "efgfoe uif fbtu xbmm pg uif dbtumf"
   ));
 
+test("Caesar Cipher: Shifting characters negatively", () =>
+  expect(caesarCipher("defendant BA!?", -2)).toBe("bcdclbylr ZY!?"));
+
 //Test 5: Analye Array
 test("Analyze Array: Average", () =>
   expect(analyzeArray([1, 3, 5, 7, 9])).toMatchObject({ average: 5 }));

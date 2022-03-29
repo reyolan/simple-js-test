@@ -43,6 +43,14 @@ function shiftCharacter(character, shift) {
     return startingCharacterCode + codeDifference;
   }
 
+  if (
+    (shiftedCharacterCode < 97 && characterCode > 96) ||
+    (shiftedCharacterCode < 65 && characterCode > 64 && characterCode < 91)
+  ) {
+    const codeSum = shiftedCharacterCode + 26;
+    return codeSum;
+  }
+
   return shiftedCharacterCode;
 }
 
